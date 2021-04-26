@@ -1319,6 +1319,93 @@ for i in range(0,6) :
     print("%d " % lotto[i], end ='')
     
 
+#예외처리
+    
+try:
+    a = [1,2]
+    print(a[0])
+    4/0
+    
+except ZeroDivisionError:
+    print("0으로 나눌 수 음슴")
+except IndexError: #0으로 나눌수 없음
+    print("인덱스 할 수 음슴")
+ 
+
+
+try:
+    #숫자로 변환
+    num_input_a = int(input("정수입력> "))
+    #출력
+    print("원의 반지름:",num_input_a )
+    print("원의 둘레:", 2 * 3.14 * num_input_a)
+    print("원의 둘레:", 3.14 * num_input * num_input_a)
+except : 
+    print("무언가 잘못되었습니다.")
+
+
+
+#파일을 찾을수 없는 예외처리 
+try:
+    f=open("나없음",'r')
+    
+except FileNotFoundError: 
+    pass
+
+
+
+#변수 선언
+list_input_a =["52", "273", "32", "스파이", "103"]
+
+#반복적용
+list_num = []
+for item in list_input_a:
+    #숫자로 변환하여 리스트에 추가
+    try:
+        float(item) #예외가 발생하면 알아서 다음으로 진행 안되겠지?
+        list_num.append(item) #예외없이 통과하면 리스트에 넣어줘 
+    except:
+        pass
+        
+#출력
+print("{} 내부에 있는 숫자는".format(list_input_a))
+print("{}입니다".format(list_num))
+
+
+
+
+try:
+    #숫자로 변환
+    num_input_a = int(input("정수입력> "))
+    #출력
+    print("원의 반지름:",num_input_a )
+    print("원의 둘레:", 2 * 3.14 * num_input_a)
+    print("원의 둘레:", 3.14 * num_input * num_input_a)
+except : 
+    print("무언가 잘못되었습니다.")
+else:
+   print("예외 발생 안함")
+finally:
+    print("일단 프로그램 끝")
+
+
+
+class Bird:
+    def fly(self):
+        raise NotImplementedError
+        
+#함수 구현 안한 에러
+class Eagle(Bird):
+    pass
+
+#한수 구현 
+class Eagle(Bird):
+    def fly(self):
+       print("very fast")
+       
+eagle =  Eagle() 
+eagle.fly()
+        
 
 
 
@@ -1346,35 +1433,154 @@ for i in range(0,6) :
 
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     

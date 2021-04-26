@@ -207,7 +207,7 @@ a.pow()
 a.add()
 
 
-#메서드 오버라이딩
+#메서드 오버라이딩 : 기능추가 덮어쓰기
 class  SafeFourCal(FourCal):
     def div(a):
         if a.second == 0:
@@ -218,10 +218,6 @@ class  SafeFourCal(FourCal):
         
 a = SafeFourCal(4,0)
 a.div()
-
-
-
-
 
 
 
