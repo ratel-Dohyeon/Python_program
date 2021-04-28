@@ -1398,7 +1398,7 @@ class Bird:
 class Eagle(Bird):
     pass
 
-#한수 구현 
+#함수 구현 
 class Eagle(Bird):
     def fly(self):
        print("very fast")
@@ -1406,6 +1406,146 @@ class Eagle(Bird):
 eagle =  Eagle() 
 eagle.fly()
         
+
+#파이썬 내장 함수
+
+#절대값 구하는 함수
+abs(3)
+abs(-3)
+abs(-1.2)
+
+#모든값이 참인지 검사
+all([1,2,3])
+all([1,2,3,0])
+
+#아나라도 참이면 참 리턴
+any([1,2,3,4,0])
+any([0, ""])
+
+#자체 변수, 함수 조여줌
+dir([1,2,3])
+['append','b','c','d','e','f']
+dir({'1':'a'})
+
+#for문 처럼 반복구간에 객체가 현제위치의 인덱스값 보여줌_enumerate
+for i, name in enumerate(['body','foo','bar']):
+    print(i, name)
+
+
+#filter(함수,값)_양수값만 리턴
+def positive(x):
+    return x > 0
+print(list(filter(positive, [1,-3, 2, 0, -5, 6])))
+print(list(filter(lambda x: x > 0, [1,-3, 2, 0, -5, 6])))
+
+
+#lambda 인자:표현식
+sum = lambda a, b:a+b
+sum(3,4)
+
+mylist = [lambda a, b:a+b, lambda a, b:a*b]
+mylist[0](3,4)
+mylist[1](3,4)
+
+#len(s) s의 길이 또는 갯수 리턴
+len("123456")
+len([1,2,3])
+len((1,'a'))
+
+#list(s) 반복가능한 s를 입력받아 리스트로 리턴
+list("python")
+
+
+#구구단 만들기_리스트형
+def GuGu(n):
+    result=[] #빈 리스트 준비
+    result.append(n * 1)
+    result.append(n * 2)
+    result.append(n * 3)
+    result.append(n * 4)
+    result.append(n * 5)
+    result.append(n * 6)
+    result.append(n * 7)
+    result.append(n * 8)
+    result.append(n * 9)
+    return result 
+GuGu(2)
+
+# while 활용 구구단_리스트형 
+def GuGu(n):
+    result=[] #빈 리스트 준비
+    i = 1
+    while i < 10:
+        result.append(n * i)
+        i = i + 1
+    return result 
+GuGu(2)
+
+
+#while
+n=1
+while n < 1000:
+    print(n)
+    n = n + 1
+print(n)
+
+# for
+for n in range(1,1000):
+    print(n)
+    
+
+#3의 배수
+for n in range(1,1000):
+    if n % 3 ==0:
+        print(n)
+
+
+#3,5 의 배수의 합 
+result = 0
+for n in range(1,1000):
+    if n % 3 ==0 or n % 5==0:
+        result += n
+    print(result)
+
+
+#게시판 페이징 
+#게시물의 총 건수(m), 보여줄 게시물 수(n)
+#나눴을 때 몫 +1
+#총 페이지 수 = (총 건수/한 페이지당 보여 줄 건수) +1
+
+def getTotalPage(m, n):
+    if m % n ==0:
+        return m // n 
+    else:
+        return m // n + 1
+print(getTotalPage(5, 10))
+print(getTotalPage(15, 10))
+print(getTotalPage(25, 10))
+print(getTotalPage(30, 10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
